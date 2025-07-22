@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{%load static %}
+{% block content %}
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="col-5 mx-auto py-4" id="form">
+                <div class="col px-0">
+                    <a href="#" onclick="login(); showForm();">Login</a> /
+                    <a href="#" onclick="registration(); showForm();">Registration</a>
+                </div>
+                <hr>
+                <form id='login'>
+                    <div class="form-group">
+                        <label for="email">Email address:</label>
+                        <input type="email" class="form-control" placeholder="Enter email" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100" id='login_btn'>Login</button>
+                </form>
+                <form id='registration'>
+                    <div class="form-group">
+                        <label for="fname">Fullname:</label>
+                        <input type="text" class="form-control" placeholder="Enter fullname" id="reg_fname">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address:</label>
+                        <input type="email" class="form-control" placeholder="Enter email" id="reg_email">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" placeholder="Enter password" id="reg_pwd">
+                    </div>
+                    <div class="form-group">
+                        <label for="cpwd">Confirm Password:</label>
+                        <input type="password" class="form-control" placeholder="Enter Confirm password" id="reg_cpwd">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary w-100" id="registration_btn">Registration</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock  %}
+
+<script src="{% static 'asset/js/login_registration_api.js' %}"></script>
+

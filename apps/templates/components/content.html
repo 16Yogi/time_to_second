@@ -1,0 +1,21 @@
+{% comment %} {% extends "layout.html" %} {% endcomment %}
+{% comment %} {% block content %} {% endcomment %}
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="col-4 mx-auto py-3" id="content">
+            <form action="">
+                <div class="form-group">
+                  <label for="seconds">Enter Seconds:</label>
+                  <input type="text" class="form-control" placeholder="Enter Seconds" id="seconds">
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Submit</button>
+            </form>
+            <div class="py-3"></div>
+            <hr>
+            <div class="col p-0" id="output">
+                <span>00 : 00 : 00</span>
+            </div>
+        </div>
+    </div>
+</div>
+{% comment %} {% endblock  %} {% endcomment %}
